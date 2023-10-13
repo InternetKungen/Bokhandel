@@ -1,0 +1,18 @@
+"Pärmar & Poesi"
+
+Färger:
+https://coolors.co/fce9e3-f2a3a8-f30044-2e000b-ffffff
+
+#fce9e3
+#f2a3a8
+#f30044
+#2e000b
+#ffffff
+
+
+För att köra sass live:
+sass --watch .\sass\style.scss .\src\css\style.css
+
+Tailwind är inkluderad i <head> (<script src="https://cdn.tailwindcss.com"></script>)
+
+Tailwind CSS Cheat Sheet: https://tailwindcomponents.com/cheatsheet/
