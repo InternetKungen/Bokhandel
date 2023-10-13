@@ -6,11 +6,18 @@
     <title>Bokhandeln</title>
     <link rel="stylesheet" href="./src/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./src/js/script.js" defer></script>
   </head>
   <body>
-    <header class="w-max h-20 bg-red-300">
-      <!-- MENY -->
-      <section class="menu-container">
+    <header>
+      <!-- MENY-KNAPP -->
+      <section class="menu-button" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </section>
+      <!--MENYN-->
+      <section class="hidden menu-container">
         <nav class="menu-container__nav-menu">
           <ul>
             <!-- PÄRMAR -->
