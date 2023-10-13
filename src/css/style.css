@@ -1,19 +1,35 @@
-* {
+/* "*" gör att sidor laddar söligare */
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 header {
-    position: absolute;
+    position: relative;
     top: 0;
-    width: 100vw;
+    margin: 0 auto;
+    width: 100%;
     height: 140px;
     background: #fcebe4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 .menu-button {
@@ -24,10 +40,20 @@ header {
     width: fit-content;
     height: fit-content;
     padding: 5px;
-    margin: 10px 10px 10px 30px;
+    margin: 10px 30px 10px 30px;
     border-radius: 5px;
     transition: transform 0.2s ease-out;
+    /* animation: sizeShow 0.5s ease-in-out 1; */
 }
+
+/* @keyframes sizeShow {
+    0%, 100% {
+        scale: 1;
+    }
+    50% {
+        scale: 0.9;
+    }
+} */
 
 .menu-button span {
     display: flex;
@@ -45,8 +71,8 @@ header {
 }
 
 .logo-container img {
-    height: 200px;
-    margin-top: 60px;
+    height: 120px;
+    margin-top: 10px;
     z-index: 100;
 }
 
@@ -55,6 +81,6 @@ header {
 }
 
 .open {
-    transform: rotate(90deg); /* Vrid knappen när menyn är öppen */
+    transform: rotate(-90deg) scale(0.9); /* Vrid knappen när menyn är öppen */
     background: #f1a2a7b0;
 }
