@@ -1,0 +1,98 @@
+$color1: #fcebe4;
+$color2: #f1a2a7;
+$color3: #f30044;
+$color4: #2f000b;
+
+$headerHeight: 140px;
+
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	// max-width: 800px;
+	margin: 0 auto;
+    height: fit-content;
+}
+
+header {
+	width: 100%;
+	height: $headerHeight;
+	background: $color1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+    border-bottom: 1px solid $color4;
+}
+.menu-button {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	background: $color2;
+	width: fit-content;
+	height: fit-content;
+	padding: 5px;
+	margin: 10px 30px 10px 30px;
+	border-radius: 5px;
+    border: 1px solid $color4;
+	transition: transform 0.2s ease-out;
+	span {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 40px;
+		height: 8px;
+		background: $color3;
+		margin: 3px;
+		border-radius: 2px;
+	}
+}
+.menu-container {
+    position: absolute;
+    top: $headerHeight;
+    width: 100%;
+	display: flex;
+    justify-content:right;
+    background-color: $color2;
+    transition: all 1s ;
+    overflow: hidden;
+    transform:translateY(1) scaleY(1);
+}
+
+
+
+.sub-navigation {
+    height: fit-content;
+    transition: all 1s;
+    li{
+        font-size: medium;
+} 
+}
+
+.logo-container {
+	img {
+		height: 120px;
+		margin-top: 10px;
+		z-index: 100;
+	}
+}
+
+//js - Menu
+.hidden {
+	// display: none;
+    opacity: 0;
+    transform:translateY(-90px) scaleY(0);
+    height: 0%;
+    background-color: $color1;
+}
+//js - Menu button effect
+.open {
+	transform: rotate(-90deg) scale(0.9);
+	background: #f1a2a7b0;
+}
+
+.hidden-sub {
+    transform:translateY(-90px) scaleY(0);
+    height: 0px;
+    background-color: $color1;
+}
