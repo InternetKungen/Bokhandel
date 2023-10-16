@@ -45,6 +45,7 @@ header {
   border-radius: 5px;
   border: 1px solid #2f000b;
   transition: all 0.2s ease-out;
+  box-sizing: border-box;
 }
 .menu-button span {
   display: flex;

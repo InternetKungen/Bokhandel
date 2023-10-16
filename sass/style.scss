@@ -68,6 +68,7 @@ header {
 	border-radius: 5px;
     border: 1px solid $color4;
 	transition: all 0.2s ease-out;
+	box-sizing: border-box;
 	span {
 		display: flex;
 		flex-direction: column;
