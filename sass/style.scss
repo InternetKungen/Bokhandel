@@ -78,7 +78,14 @@ header {
 		margin: 3px;
 		border-radius: 2px;
 		transition: all 0.3s ease-out;
+		
 	}
+	&:hover {
+		span {
+			scale: 0.9;
+		}
+	}
+	
 }
 .menu-container {
     position: absolute;
@@ -139,6 +146,13 @@ header {
 		transform-origin: 0 100%;
 		width: 45px;
 	}
+	&:hover {
+		scale: 1.1;
+		span {
+			scale: 1;
+		}
+	}
+		
 }
 
 .hidden-sub {

@@ -57,6 +57,9 @@ header {
   border-radius: 2px;
   transition: all 0.3s ease-out;
 }
+.menu-button:hover span {
+  scale: 0.9;
+}
 
 .menu-container {
   position: absolute;
@@ -115,6 +118,12 @@ header {
   transform: rotate(-45deg);
   transform-origin: 0 100%;
   width: 45px;
+}
+.open:hover {
+  scale: 1.1;
+}
+.open:hover span {
+  scale: 1;
 }
 
 .hidden-sub {
