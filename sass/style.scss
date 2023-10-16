@@ -3,7 +3,7 @@ $color2: #f1a2a7;
 $color3: #f30044;
 $color4: #2f000b;
 
-$headerHeight: 140px;
+$headerHeight: 80px;
 
 @mixin justify-content-left-row {
 	display: flex;
@@ -48,10 +48,14 @@ header {
 
 .left-container {
 	@include justify-content-left-row;
+	transform: scale(0.6);
+	margin-left: -40px;
 } 
 
 .right-container {
 	@include justify-content-left-row;
+	transform: scale(0.6);
+	margin-right: -40px;
 } 
 
 .menu-button {
@@ -88,6 +92,11 @@ header {
 	}
 	
 }
+
+a {
+	text-decoration: none;
+}
+
 .menu-container {
     position: absolute;
     top: $headerHeight;
@@ -95,9 +104,9 @@ header {
 	display: flex;
     justify-content:left;
     background-color: $color2;
-    // transition: all 1s ;
+    transition: all 0.3s ;
     overflow: hidden;
-    transform:translateY(1) scaleY(1);
+    transform:translateX(1);
 	li {
 		margin-left: 20px;
 		padding: 10px;
@@ -108,7 +117,7 @@ header {
     height: fit-content;
     // transition: all 1s;
     li{
-        font-size: medium;
+        font-size: small;
 } 
 }
 
@@ -124,7 +133,7 @@ header {
 .hidden {
 	// display: none;
     opacity: 0;
-    transform:translateY(-90px) scaleY(0);
+    transform:translateX(-100%);
     height: 0%;
     background-color: $color1;
 }
