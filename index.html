@@ -29,8 +29,10 @@
           <ul>
             <!-- PÄRMAR -->
             <li>
-              <a href="#" id="pärm" onclick="toggleSubMenu(this)">Pärmar</a>
-              <div class="hidden-sub sub-navigation">
+              <a href="#" data-submenu="parmar" onclick="toggleSubMenu(this)"
+                >Pärmar</a
+              >
+              <div class="hidden-sub sub-navigation" id="parmar">
                 <ul>
                   <li><a href="#"> Liten </a></li>
                   <li><a href="#"> Mellan </a></li>
@@ -38,14 +40,30 @@
                 </ul>
               </div>
             </li>
-            <!-- BÖCKER -->
             <li>
-              <a href="#" id="böker" onclick="toggleSubMenu(this)">Böcker</a>
+              <a href="#" data-submenu="bocker" onclick="toggleSubMenu(this)"
+                >Böcker</a
+              >
+              <div class="hidden-sub sub-navigation" id="bocker">
+                <ul>
+                  <li><a href="#"> Liten </a></li>
+                  <li><a href="#"> Mellan </a></li>
+                  <li><a href="#"> Stor </a></li>
+                </ul>
+              </div>
             </li>
             <li>
-              <a href="#" id="böker" onclick="toggleSubMenu(this)">Kalendrar</a>
+              <a href="#" data-submenu="kalendrar" onclick="toggleSubMenu(this)"
+                >Kalendrar</a
+              >
+              <div class="hidden-sub sub-navigation" id="kalendrar">
+                <ul>
+                  <li><a href="#"> Liten </a></li>
+                  <li><a href="#"> Mellan </a></li>
+                  <li><a href="#"> Stor </a></li>
+                </ul>
+              </div>
             </li>
-            <li>Böcker</li>
           </ul>
         </nav>
       </section>
