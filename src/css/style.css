@@ -147,10 +147,12 @@ a {
 }
 
 .header-icon {
-  height: 40px;
-  width: 40px;
   margin-right: 10px;
   transform: scale(0.9);
+}
+.header-icon img {
+  height: 40px;
+  width: 40px;
 }
 .header-icon:hover {
   --overlay-color: $color4;
@@ -158,14 +160,8 @@ a {
   mix-blend-mode: darken;
 }
 
-.header-icon:nth-child(1) {
-  margin-right: 2px;
-}
-
 .header-icon:nth-child(2) {
-  height: 52px;
-  width: 52px;
-  margin-right: 1px;
+  transform: scale(1.2);
 }
 
 .header-icon:nth-child(4) {
