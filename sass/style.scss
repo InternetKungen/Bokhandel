@@ -92,16 +92,20 @@ header {
     top: $headerHeight;
     width: 100%;
 	display: flex;
-    justify-content:right;
+    justify-content:left;
     background-color: $color2;
-    transition: all 1s ;
+    // transition: all 1s ;
     overflow: hidden;
     transform:translateY(1) scaleY(1);
+	li {
+		margin-left: 20px;
+		padding: 10px;
+	}
 }
 
 .sub-navigation {
     height: fit-content;
-    transition: all 1s;
+    // transition: all 1s;
     li{
         font-size: medium;
 } 
@@ -156,7 +160,9 @@ header {
 }
 
 .hidden-sub {
-    transform:translateY(-90px) scaleY(0);
+    transform:translateY(-60px) scaleY(0);
     height: 0px;
-    background-color: $color1;
+    background-color: transparent;
+	color: transparent;
+	scale: 0;
 }

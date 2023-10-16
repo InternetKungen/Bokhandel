@@ -14,7 +14,7 @@
         <!-- MENY-KNAPP -->
         <section class="menu-button" onclick="toggleMenu()">
           <span></span>
-          <span id="menu-button__middle-line"></span>
+          <span></span>
           <span></span>
         </section>
         <!-- LOGO -->
@@ -29,7 +29,7 @@
           <ul>
             <!-- PÄRMAR -->
             <li>
-              <a href="#" id="pärm" onclick="toggleSubMenu()">Pärmar</a>
+              <a href="#" id="pärm" onclick="toggleSubMenu(this)">Pärmar</a>
               <div class="hidden-sub sub-navigation">
                 <ul>
                   <li><a href="#"> Liten </a></li>
@@ -39,8 +39,12 @@
               </div>
             </li>
             <!-- BÖCKER -->
-            <li>Böcker</li>
-            <li>Kalendrar</li>
+            <li>
+              <a href="#" id="böker" onclick="toggleSubMenu(this)">Böcker</a>
+            </li>
+            <li>
+              <a href="#" id="böker" onclick="toggleSubMenu(this)">Kalendrar</a>
+            </li>
             <li>Böcker</li>
           </ul>
         </nav>

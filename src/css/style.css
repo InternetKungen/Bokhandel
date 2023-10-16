@@ -66,16 +66,18 @@ header {
   top: 140px;
   width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: left;
   background-color: #f1a2a7;
-  transition: all 1s;
   overflow: hidden;
   transform: translateY(1) scaleY(1);
+}
+.menu-container li {
+  margin-left: 20px;
+  padding: 10px;
 }
 
 .sub-navigation {
   height: fit-content;
-  transition: all 1s;
 }
 .sub-navigation li {
   font-size: medium;
@@ -127,9 +129,11 @@ header {
 }
 
 .hidden-sub {
-  transform: translateY(-90px) scaleY(0);
+  transform: translateY(-60px) scaleY(0);
   height: 0px;
-  background-color: #fcebe4;
+  background-color: transparent;
+  color: transparent;
+  scale: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
