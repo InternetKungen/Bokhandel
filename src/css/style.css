@@ -15,11 +15,12 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #2f000b;
+  z-index: 5;
 }
 
 .left-container {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   flex-direction: row;
   align-items: center;
   transform: scale(0.6);
@@ -28,7 +29,7 @@ header {
 
 .right-container {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   flex-direction: row;
   align-items: center;
   transform: scale(0.6);
@@ -80,10 +81,15 @@ a {
   transition: all 0.3s;
   overflow: hidden;
   transform: translateX(1);
+  z-index: 5;
+}
+.menu-container ul {
+  list-style-type: none;
 }
 .menu-container li {
   margin-left: 20px;
   padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .sub-navigation {
@@ -155,7 +161,6 @@ a {
   width: 40px;
 }
 .header-icon:hover {
-  --overlay-color: $color4;
   filter: grayscale(90%);
   mix-blend-mode: darken;
 }
@@ -166,6 +171,80 @@ a {
 
 .header-icon:nth-child(4) {
   margin-right: 20px;
+}
+
+.book-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.book-sale {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2f000b;
+  background: #fcebe4;
+  width: 240px;
+  height: 500px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.book-sale img {
+  flex: 5;
+  margin-top: 0px;
+  height: 60%;
+  object-fit: none;
+}
+.book-sale h1 {
+  margin: 0;
+  align-self: baseline;
+  font-size: large;
+  font-weight: 600;
+}
+.book-sale h2 {
+  margin: 0;
+  font-weight: 100;
+  font-size: large;
+  align-self: baseline;
+}
+.book-sale h1,
+.book-sale h2 {
+  flex: 1;
+}
+.book-sale p {
+  font-weight: 800;
+  align-self: center;
+}
+.book-sale button {
+  align-self: center;
+  flex: 1;
+  background: #f1a2a7;
+  color: #2f000b;
+  width: 180px;
+  height: 10%;
+  border: 1px solid #2f000b;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.recommendations h1 {
+  margin: 4px 4px 0 15px;
+  font-weight: 700;
+  font-size: large;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2f000b;
+  width: 240px;
+  height: 500px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
