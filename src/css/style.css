@@ -294,26 +294,29 @@ a {
   border: 1px solid white;
 }
 .book-sale h4 {
+  flex: 1;
   margin-top: 5px;
   background: none;
   color: #2f000b;
   align-self: baseline;
-  font-size: medium;
   font-weight: 600;
   width: 100%; /* Anpassa bredden efter ditt behov */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -moz-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  line-height: 1.25em;
+  word-wrap: break-word;
 }
 .book-sale h2 {
-  margin: 0;
+  flex: 0.5;
   font-weight: 100;
   font-size: small;
   align-self: baseline;
 }
 .book-sale h4,
 .book-sale h2 {
-  flex: 1;
   padding: 0 1px 0 1px;
 }
 .book-sale p {
@@ -321,7 +324,7 @@ a {
   font-weight: 800;
   align-self: center;
   margin-top: 4px;
-  flex: 1;
+  flex: 0.2;
 }
 .book-sale button {
   align-self: center;
