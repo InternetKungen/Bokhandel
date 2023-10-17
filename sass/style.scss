@@ -7,14 +7,14 @@ $headerHeight: 80px;
 
 @mixin justify-content-left-row {
 	display: flex;
-	justify-content: left;
+	justify-content: flex-start;
 	flex-direction: row;
 	align-items: center;
 }
 
 @mixin justify-content-right-row {
 	display: flex;
-	justify-content: right;
+	justify-content: flex-end;
 	flex-direction: row;
 	align-items: center;
 }
@@ -30,7 +30,6 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	// max-width: 800px;
 	margin: 0 auto;
     height: fit-content;
 }
@@ -44,6 +43,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
     border-bottom: 1px solid $color4;
+	z-index: 5;
 }
 
 .left-container {
@@ -83,9 +83,9 @@ header {
 		margin: 3px;
 		border-radius: 2px;
 		transition: all 0.3s ease-out;
-		
 	}
 	&:hover {
+		box-shadow: 0 0 8px $color4;
 		span {
 			scale: 0.9;
 		}
@@ -104,12 +104,21 @@ a {
 	display: flex;
     justify-content:left;
     background-color: $color2;
-    transition: all 0.3s ;
+    transition: all 0.3s ease-in-out;
     overflow: hidden;
     transform:translateX(1);
+	z-index: 5;
+	ul {
+	list-style-type: none;
+	}
 	li {
 		margin-left: 20px;
 		padding: 10px;
+		font-family: Arial, Helvetica, sans-serif;
+		color: $color4;
+		&:hover {
+			text-shadow: 0 0 1px $color1;
+		}
 	}
 }
 
@@ -168,7 +177,7 @@ a {
 	}
 		
 }
-
+//js - Menu - Sub-menu
 .hidden-sub {
     transform:translateY(-60px) scaleY(0);
     height: 0px;
@@ -181,27 +190,180 @@ a {
 	// --overlay-color: #{$color3}; // Skapa en CSS-variabel för din färg
 	// filter: grayscale(50%) invert(100%) hue-rotate(80deg);
 	// mix-blend-mode: color;
-	height: 40px;
-	width:  40px;
+	// height: 40px;
+	// width:  40px;
 	margin-right: 10px;
 	transform: scale(0.9);
+	img {
+		height: 40px;
+		width:  40px;
+		
+	}
 	&:hover {
-		--overlay-color: $color4;
+		// --overlay-color: $color4;
 		filter: grayscale(90%);
 		mix-blend-mode:darken;
 	}
 }
 
-.header-icon:nth-child(1) {
-	margin-right: 2px;
-}
+// .header-icon:nth-child(1) {
+// 	// margin-right: 2px;
+// }
 
 .header-icon:nth-child(2) {
-	height: 52px;
-	width:  52px;
-	margin-right: 1px;
+	// height: 52px; //anävnder scale istället
+	// width:  52px;
+	transform: scale(1.2);
+	// margin-right: 1px;
 }
 
 .header-icon:nth-child(4) {
 	margin-right: 20px;
 }
+
+.book-inner-container {
+	@include justify-content-left-row();
+	width: 100%;
+	transition: transform 0.3s ease;
+	flex-wrap: nowrap;
+	overflow-x: scroll; /* Lägg till detta för att möjliggöra horisontell rullning */
+  	scrollbar-width: none; /* Dölj scrollbars i Firefox */
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+	&::-webkit-scrollbar-thumb {
+    display: none; /* Dölj scrollbars i Chrome och Safari */
+	}
+}
+
+// .book-inner-container::-webkit-scrollbar {
+// 	-webkit-appearance: none;
+// }
+
+.book-container {
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+@mixin scroll-button-shape {
+	width: 50px;
+	height: 65px;
+	background: $color2;
+	color: $color2;
+	border: 1px solid $color1;
+	font-size: 13px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0.4;
+	z-index: 10;
+	transition: all 0.3s;
+	&:hover {
+		opacity: 1;
+		box-shadow: 0 0 30px $color2;
+		background: $color3;
+		color: $color1;
+	}
+}
+
+.scroll-button-left {
+		left: 0;
+		@include scroll-button-shape();
+		border-radius: 25px 5px 5px 25px;
+		
+}
+.scroll-button-right {
+		right: 0;
+		@include scroll-button-shape();
+		border-radius: 5px 25px 25px 5px;
+		
+}
+
+
+
+.recommendations {	
+	h3 {
+		color: $color3;
+		border-radius: 5px;
+		margin: 8px 4px 0 10px;
+		font-weight: 700;
+		font-size: large;
+		width: fit-content;
+		text-shadow: 0 0 3px $color2;
+		}
+}
+
+.book-sale {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid $color4;
+	background: $color1;
+	width: 240px;
+	height: 500px;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	transition: all 0.4s;
+	img {
+		flex: 5;
+		margin-top: 0px;
+		height: 60%;
+		object-fit:cover;
+		border-radius: 10px;
+		border: 1px solid white;
+	}
+	h1 {
+		margin: 0;
+		background: none;
+		color: $color4;
+		align-self: baseline;
+		font-size: medium;
+		font-weight: 600;
+	}
+	h2 {
+		margin: 0;
+		font-weight:100;
+		font-size:small;
+		align-self: baseline;
+	}
+	h1, 
+	h2 {
+		flex:1;
+	}
+	p {
+		font-weight: 800;
+		align-self: center;
+	}
+	button {
+		align-self: center;
+		flex: 1;
+		// position: absolute;
+		// bottom: 10px;
+		// left: 50%;
+		// transform: translateX(-50%) translateY(-10%);
+		background: $color2;
+		color: $color4;
+		width: 180px;
+		height: 10%;
+		border: 1px solid $color4;
+		border-radius: 5px;
+		margin-bottom: 10px;
+		transition: all 0.4s ease-in-out;
+		&:hover {
+			background: $color3;
+		color: $color1;
+		}
+	}
+	&:hover {
+		box-shadow: 0 0 5px $color4;
+	}
+}
+
+
+
