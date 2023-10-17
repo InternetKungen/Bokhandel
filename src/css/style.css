@@ -110,7 +110,23 @@ a {
   height: fit-content;
 }
 .sub-navigation li {
-  font-size: small;
+  font-size: 14px;
+}
+
+.overlay {
+  display: block;
+  height: calc(100vh - 80px);
+  width: 100vw;
+  opacity: 0.5;
+  background: #2f000b;
+  position: absolute;
+  z-index: 4;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.visible {
+  display: none;
 }
 
 .logo-container img {

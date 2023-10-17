@@ -1,11 +1,23 @@
 function toggleMenu() {
     const section_menu = document.querySelector('.menu-container');
     const menuButton = document.querySelector('.menu-button');
+    const overlay = document.querySelector('.overlay');
 
     section_menu.classList.toggle('hidden');
     menuButton.classList.toggle('open'); // Lägg till eller ta bort CSS-klassen 'open' 
+    overlay.classList.toggle('visible');
 
+    // Lägg till eventlyssnare för klick utanför menyn
+    document.addEventListener('click', function (event) {
+      const isClickInsideMenu = section_menu.contains(event.target);
+      const isClickOnMenuButton = menuButton.contains(event.target);
 
+      if (!isClickInsideMenu && !isClickOnMenuButton) {
+          section_menu.classList.add('hidden');
+          menuButton.classList.remove('open');
+          overlay.classList.add('visible');
+      }
+  });
 }
 
 function toggleSubMenu(link) {
