@@ -86,75 +86,92 @@
     <!-- MAIN-CONTENT -->
     <main>
       <section class="recommendations">
-        <h1>Rekommendationer</h1>
+        <h3>Rekommendationer</h3>
+
         <section class="book-container">
-          <article class="book-sale">
-            <img
-              src="./src/img/books/barn/aja-baja-alfons-aberg.jpg"
-              alt="Bok - Aja baja alfons"
-            />
-            <h1>Aja baja, Alfons Åberg</h1>
-            <h2>Gunilla Bergström</h2>
-            <!-- <details>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
-            laborum iusto voluptatem accusantium cum?
-          </details> -->
-            <p><data class="price">120</data> kr</p>
-            <button>Köp</button>
-          </article>
+          <button
+            class="scroll-button-left"
+            id="scroll-left"
+            onclick="leftScroll()"
+          >
+            ←LEFT
+          </button>
 
-          <article class="book-sale">
-            <img
-              src="./src/img/books/barn/brandkarsmysteriet.jpg"
-              alt="Bok - Brandmysteriet"
-            />
-            <h1>Brandbysteriet</h1>
-            <h2>Gunilla Bergström</h2>
-            <!-- <details>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
-            laborum iusto voluptatem accusantium cum?
-          </details> -->
-            <p><data class="price">120</data> kr</p>
-            <button>Köp</button>
-          </article>
-
-          <article class="book-sale">
-            <img
-              src="./src/img/books/barn/handbok-for-superhjaltar-ensam.jpg"
-              alt="Bok - Brandmysteriet"
-            />
-            <h1>Handbok för Superhjältar - Ensam</h1>
-            <h2>Elias & Agnes Vämhund</h2>
-            <p><data class="price">120</data> kr</p>
-            <button>Köp</button>
-          </article>
-
-          <!-- <article class="book">
-            <section class="book__top">
+          <section class="book-inner-container">
+            <article class="book-sale">
               <img
-                src="./src/img/books/barn/handbok-for-superhjaltar-roda-masken.jpg"
-                alt="Bok - Brandmysteriet"
+                src="./src/img/books/barn/aja-baja-alfons-aberg.jpg"
+                alt="Bok - Aja baja alfons"
               />
-            </section>
-            <section class="book__middle">
-              <h1>Handbok för Superhjältar - Röda masken</h1>
-              <h2>Elias & Agnes Vämhund</h2>
-            </section>
-            <section class="book__end">
+              <h1>Aja baja, Alfons Åberg</h1>
+              <h2>Gunilla Bergström</h2>
               <p><data class="price">120</data> kr</p>
               <button>Köp</button>
-            </section>
-          </article> -->
-          <article class="book-sale">
-            <img
-              src="./src/img/books/barn/handbok-for-superhjaltar-roda-masken.jpg"
-              alt="Bok - Handbok för superhjältar - Röda masken"
-            />
-            <h1>Handbok för superhjältar - Röda masken</h1>
-            <h2>Elias & Agnes Vämlund</h2>
-            <p><data class="price">120</data> kr</p>
-            <button><a href="#köp-item">Köp</a></button>
-          </article>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/brandkarsmysteriet.jpg"
+                alt="Bok - Brandmysteriet"
+              />
+              <h1>Brandbysteriet</h1>
+              <h2>Gunilla Bergström</h2>
+              <p><data class="price">120</data> kr</p>
+              <button>Köp</button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/handbok-for-superhjaltar-ensam.jpg"
+                alt="Bok - Brandmysteriet"
+              />
+              <h1>Handbok för Superhjältar - Ensam</h1>
+              <h2>Elias & Agnes Vämhund</h2>
+              <p><data class="price">120</data> kr</p>
+              <button>Köp</button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/handbok-for-superhjaltar-roda-masken.jpg"
+                alt="Bok - Handbok för superhjältar - Röda masken"
+              />
+              <h1>Handbok för superhjältar - Röda masken</h1>
+              <h2>Elias & Agnes Vämlund</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/hundmannen.jpg"
+                alt="Bok - Hundmannen"
+              />
+              <h1>Hundmannen</h1>
+              <h2>Dav Pilkey</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/musse-helium-aventyret-i-lindrizia.jpg"
+                alt="Bok - Musse"
+              />
+              <h1>Musse Helium</h1>
+              <h2>Camilla Brinck</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+          </section>
+
+          <button
+            class="scroll-button right"
+            id="scroll-right"
+            onclick="rightScroll()"
+          >
+            RIGHT→
+          </button>
         </section>
       </section>
     </main>

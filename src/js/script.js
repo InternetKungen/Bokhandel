@@ -21,3 +21,45 @@ function toggleSubMenu(link) {
         subMenu.classList.toggle('hidden-sub');
     }
 }
+
+function rightScroll() {
+    const left = document.querySelector(".book-inner-container");
+    left.scrollBy(200, 0);
+}
+function leftScroll() {
+    const right = document.querySelector(".book-inner-container");
+    right.scrollBy(-200, 0);
+}
+
+
+// const scrollLeftButton = document.getElementById('scroll-left');
+// const scrollRightButton = document.getElementById('scroll-right');
+// const bookInnerContainer = document.querySelector('.book-inner-container');
+
+// scrollLeftButton.addEventListener('click', () => {
+//   bookInnerContainer.scrollLeft -= 100; // Ändra detta värde för att justera scrollavståndet.
+// });
+
+// scrollRightButton.addEventListener('click', () => {
+//   bookInnerContainer.scrollLeft += 100; // Ändra detta värde för att justera scrollavståndet.
+// });
+
+// -------------Flyttar hela bilden---
+// const scrollLeftButton = document.getElementById('scroll-left');
+// const scrollRightButton = document.getElementById('scroll-right');
+// const bookInnerContainer = document.querySelector('.book-inner-container');
+// let scrollPosition = 0; // Håll reda på den aktuella scrollpositionen
+
+// scrollLeftButton.addEventListener('click', () => {
+//   scrollPosition -= 400; // Ändra detta värde för att justera scrollavståndet.
+//   updateScrollPosition();
+// });
+
+// scrollRightButton.addEventListener('click', () => {
+//   scrollPosition += 400; // Ändra detta värde för att justera scrollavståndet.
+//   updateScrollPosition();
+// });
+
+// function updateScrollPosition() {
+//   bookInnerContainer.style.transform = `translateX(-${scrollPosition}px)`;
+// }
