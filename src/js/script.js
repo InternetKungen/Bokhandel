@@ -22,14 +22,86 @@ function toggleSubMenu(link) {
     }
 }
 
-function rightScroll() {
-    const left = document.querySelector(".book-inner-container");
-    left.scrollBy(200, 0);
-}
-function leftScroll() {
-    const right = document.querySelector(".book-inner-container");
-    right.scrollBy(-200, 0);
-}
+function smoothScroll(element, targetX, duration) {
+    const startX = element.scrollLeft;
+    const startTime = performance.now();
+  
+    function easeInOutCubic(t) {
+      // Använd en anpassad animeringsfunktion som efterliknar "ease-in-out".
+      return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    }
+  
+    function step(time) {
+      const elapsed = time - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeInOutCubic(progress);
+      element.scrollLeft = startX + (targetX - startX) * easedProgress;
+  
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+  
+    requestAnimationFrame(step);
+  }
+  
+  function rightScroll() {
+    const container = document.querySelector(".book-inner-container");
+    const targetX = container.scrollLeft + 400;
+    smoothScroll(container, targetX, 300); // Justera duration efter behov
+  }
+  
+  function leftScroll() {
+    const container = document.querySelector(".book-inner-container");
+    const targetX = container.scrollLeft - 400;
+    smoothScroll(container, targetX, 300); // Justera duration efter behov
+  }
+  
+
+// SMOOTHER WORKING-------------------------------
+// function smoothScroll(element, targetX, duration) {
+//     const startX = element.scrollLeft;
+//     const startTime = performance.now();
+  
+//     function step(time) {
+//       const elapsed = time - startTime;
+//       const progress = Math.min(elapsed / duration, 1);
+//       element.scrollLeft = startX + (targetX - startX) * progress;
+  
+//       if (progress < 1) {
+//         requestAnimationFrame(step);
+//       }
+//     }
+  
+//     requestAnimationFrame(step);
+//   }
+  
+//   function rightScroll() {
+//     const container = document.querySelector(".book-inner-container");
+//     const targetX = container.scrollLeft + 200;
+//     smoothScroll(container, targetX, 300); // Justera duration efter behov
+//   }
+  
+//   function leftScroll() {
+//     const container = document.querySelector(".book-inner-container");
+//     const targetX = container.scrollLeft - 200;
+//     smoothScroll(container, targetX, 300); // Justera duration efter behov
+//   }
+
+
+
+// ----WORKING--------------------
+// function rightScroll() {
+//     const left = document.querySelector(".book-inner-container");
+//     left.scrollBy(200, 0);
+// }
+// function leftScroll() {
+//     const right = document.querySelector(".book-inner-container");
+//     right.scrollBy(-200, 0);
+// }
+
+
+
 
 
 // const scrollLeftButton = document.getElementById('scroll-left');
