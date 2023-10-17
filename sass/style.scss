@@ -25,6 +25,11 @@ $headerHeight: 80px;
 	align-items: center;
 }
 
+@mixin hide-overflow-text {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
 
 body {
 	display: flex;
@@ -304,8 +309,8 @@ a {
 	flex-direction: column;
 	border: 1px solid $color4;
 	background: $color1;
-	width: 240px;
-	height: 500px;
+	width: 200px;
+	height: 400px;
 	padding: 5px;
 	margin: 5px;
 	border-radius: 5px;
@@ -318,27 +323,37 @@ a {
 		border-radius: 10px;
 		border: 1px solid white;
 	}
-	h1 {
-		margin: 0;
+	h4 {
+		margin-top:5px;
 		background: none;
 		color: $color4;
 		align-self: baseline;
 		font-size: medium;
 		font-weight: 600;
-	}
+		width: 100%; /* Anpassa bredden efter ditt behov */
+		@include hide-overflow-text();
+// 		white-space: wrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// 		height: 1em;
+			}
 	h2 {
 		margin: 0;
 		font-weight:100;
 		font-size:small;
 		align-self: baseline;
 	}
-	h1, 
+	h4, 
 	h2 {
 		flex:1;
+		padding: 0 1px 0 1px;
 	}
 	p {
+		font-size: 18px;
 		font-weight: 800;
 		align-self: center;
+		margin-top: 4px;
+		flex: 1;
 	}
 	button {
 		align-self: center;
@@ -353,11 +368,13 @@ a {
 		height: 10%;
 		border: 1px solid $color4;
 		border-radius: 5px;
-		margin-bottom: 10px;
+		margin: 0 10px 10px 10px;
 		transition: all 0.4s ease-in-out;
 		&:hover {
 			background: $color3;
-		color: $color1;
+			color: $color1;
+			border: 1px solid $color4;
+			box-shadow: 0 0 3px $color3;
 		}
 	}
 	&:hover {

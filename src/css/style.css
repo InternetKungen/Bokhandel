@@ -272,8 +272,8 @@ a {
   flex-direction: column;
   border: 1px solid #2f000b;
   background: #fcebe4;
-  width: 240px;
-  height: 500px;
+  width: 200px;
+  height: 400px;
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
@@ -287,13 +287,17 @@ a {
   border-radius: 10px;
   border: 1px solid white;
 }
-.book-sale h1 {
-  margin: 0;
+.book-sale h4 {
+  margin-top: 5px;
   background: none;
   color: #2f000b;
   align-self: baseline;
   font-size: medium;
   font-weight: 600;
+  width: 100%; /* Anpassa bredden efter ditt behov */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .book-sale h2 {
   margin: 0;
@@ -301,13 +305,17 @@ a {
   font-size: small;
   align-self: baseline;
 }
-.book-sale h1,
+.book-sale h4,
 .book-sale h2 {
   flex: 1;
+  padding: 0 1px 0 1px;
 }
 .book-sale p {
+  font-size: 18px;
   font-weight: 800;
   align-self: center;
+  margin-top: 4px;
+  flex: 1;
 }
 .book-sale button {
   align-self: center;
@@ -318,12 +326,14 @@ a {
   height: 10%;
   border: 1px solid #2f000b;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 10px;
   transition: all 0.4s ease-in-out;
 }
 .book-sale button:hover {
   background: #f30044;
   color: #fcebe4;
+  border: 1px solid #2f000b;
+  box-shadow: 0 0 3px #f30044;
 }
 .book-sale:hover {
   box-shadow: 0 0 5px #2f000b;
