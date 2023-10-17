@@ -226,7 +226,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.4;
-  z-index: 2;
+  z-index: 1;
   transition: all 0.3s;
   border-radius: 25px 5px 5px 25px;
 }
@@ -250,7 +250,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.4;
-  z-index: 2;
+  z-index: 1;
   transition: all 0.3s;
   border-radius: 5px 25px 25px 5px;
 }

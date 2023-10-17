@@ -275,7 +275,7 @@ a {
 	top: 50%;
 	transform: translateY(-50%);
 	opacity: 0.4;
-	z-index: 2;
+	z-index: 1;
 	transition: all 0.3s;
 	&:hover {
 		opacity: 1;
