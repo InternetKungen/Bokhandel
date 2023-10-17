@@ -5,7 +5,16 @@ function toggleMenu() {
     section_menu.classList.toggle('hidden');
     menuButton.classList.toggle('open'); // Lägg till eller ta bort CSS-klassen 'open' 
 
+    // Lägg till eventlyssnare för klick utanför menyn
+    document.addEventListener('click', function (event) {
+      const isClickInsideMenu = section_menu.contains(event.target);
+      const isClickOnMenuButton = menuButton.contains(event.target);
 
+      if (!isClickInsideMenu && !isClickOnMenuButton) {
+          section_menu.classList.add('hidden');
+          menuButton.classList.remove('open');
+      }
+  });
 }
 
 function toggleSubMenu(link) {
