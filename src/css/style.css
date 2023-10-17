@@ -64,6 +64,9 @@ header {
   border-radius: 2px;
   transition: all 0.3s ease-out;
 }
+.menu-button:hover {
+  box-shadow: 0 0 8px #2f000b;
+}
 .menu-button:hover span {
   scale: 0.9;
 }
@@ -91,6 +94,7 @@ a {
   margin-left: 20px;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  color: #2f000b;
 }
 .menu-container li:hover {
   text-shadow: 0 0 1px #fcebe4;

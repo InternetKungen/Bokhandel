@@ -83,9 +83,9 @@ header {
 		margin: 3px;
 		border-radius: 2px;
 		transition: all 0.3s ease-out;
-		
 	}
 	&:hover {
+		box-shadow: 0 0 8px $color4;
 		span {
 			scale: 0.9;
 		}
@@ -115,6 +115,7 @@ a {
 		margin-left: 20px;
 		padding: 10px;
 		font-family: Arial, Helvetica, sans-serif;
+		color: $color4;
 		&:hover {
 			text-shadow: 0 0 1px $color1;
 		}
@@ -196,6 +197,7 @@ a {
 	img {
 		height: 40px;
 		width:  40px;
+		
 	}
 	&:hover {
 		// --overlay-color: $color4;
