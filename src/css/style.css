@@ -364,4 +364,263 @@ a {
   box-shadow: 0 0 5px #2f000b;
 }
 
+/* a{
+color: white;
+text-decoration: none;
+font-weight:lighter;
+
+} */
+/* a:hover{
+
+color: pink;
+} */
+/* Media Queries */
+footer {
+  display: flex;
+  height: 30%;
+  background-color: #f30044;
+  color: #fff;
+  justify-content: space-between;
+}
+footer li {
+  margin: 15px;
+}
+
+.rad-ett {
+  display: grid;
+  grid-gap: 2px;
+  padding-left: 7%;
+  padding-top: 4.5%;
+  font-size: small;
+  margin-bottom: 15px;
+}
+.rad-ett:nth-child(1) a.link-hem {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-ett:nth-child(1) a.link-evenemang {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-ett:nth-child(1) a.link-bocker {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-ett:nth-child(1) a.link-nyheter {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.rad-tva {
+  display: grid;
+  grid-gap: 2px;
+  padding-left: 3%;
+  padding-top: 4.5%;
+  font-size: small;
+}
+.rad-tva:nth-child(2) a.link-kontakt {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-tva:nth-child(2) a.link-media {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-tva:nth-child(2) a.link-oss {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-tva:nth-child(2) a.link-faq {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.rad-tre {
+  display: grid;
+  grid-gap: 2px;
+  padding-left: 3%;
+  padding-top: 4.5%;
+  font-size: small;
+}
+.rad-tre:nth-child(3) a.link-kontaktaoss {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-tre:nth-child(3) a.link-email {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-tre:nth-child(3) a.link-telefon {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.rad-tre:nth-child(3) a.link-adress {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.footer-textbox {
+  flex: 1;
+  padding-top: 90px;
+  border-radius: 8px;
+  margin-left: 12%;
+}
+.footer-textbox p {
+  margin-bottom: 2%;
+}
+.footer-textbox input {
+  width: 50%;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 13px;
+  color: black;
+}
+
+.footer-button {
+  display: inline-block;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-left: 3%;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-size: small;
+  width: 20%;
+}
+
+.ikoner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-top: 20%;
+  padding-left: 15%;
+  margin-bottom: 2%;
+}
+
+.twitter {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.instagram {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.facebook {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.ikontext {
+  margin-right: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    padding: 50px;
+    display: flex;
+    background-color: #2f000b;
+    justify-content: space-between;
+  }
+  .rad-ett {
+    display: grid;
+    padding-left: 10px;
+    font-size: 13px;
+    text-align: left;
+  }
+  .rad-tva {
+    display: grid;
+    padding-left: 15px;
+    font-size: 13px;
+  }
+  .rad-tre {
+    display: none;
+  }
+  .ikoner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .ikoner i {
+    font-size: 30px;
+  }
+  .ikontext {
+    padding-top: 10px;
+  }
+  .footer-textbox {
+    display: none;
+  }
+}
+@media only screen and (max-width: 844px) {
+  footer {
+    padding: 50px;
+    display: flex;
+    background-color: #2f000b;
+    justify-content: space-between;
+  }
+  .rad-ett {
+    display: grid;
+    padding-left: 10px;
+    font-size: 13px;
+    text-align: left;
+  }
+  .rad-tva {
+    display: grid;
+    padding-left: 15px;
+    font-size: 13px;
+  }
+  .rad-tre {
+    display: none;
+  }
+  .ikoner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .ikoner i {
+    font-size: 30px;
+  }
+  .ikontext {
+    padding-top: 10px;
+  }
+  .footer-textbox {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

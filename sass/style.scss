@@ -421,5 +421,272 @@ a {
 	}
 }
 
+$color1: #fcebe4;
+$color2: #f1a2a7;
+$color3: #f30044;
+$color4: #2f000b;
+
+// ADDED--------------------------------
+
+$color_1: #fff;
+$color_2: white;
+$color_3: black;
+$background-color_1: #f30044;
+$background-color_2: white;
+$background-color_3: #2f000b;
+
+/* a{
+color: white;
+text-decoration: none;
+font-weight:lighter;
+
+} */
+/* a:hover{
+
+color: pink;
+} */
+/* Media Queries */
+footer {
+	display: flex;
+	height: 30%;
+	background-color: $background-color_1;
+	color: $color_1;
+	justify-content: space-between;
+	li {
+		margin: 15px;
+	}
+}
+.rad-ett {
+	display: grid;
+	grid-gap: 2px;
+	padding-left: 7%;
+	padding-top: 4.5%;
+	font-size: small;
+	margin-bottom: 15px;
+	&:nth-child(1) {
+		a.link-hem {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-evenemang {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-bocker {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-nyheter {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+	}
+}
+.rad-tva {
+	display: grid;
+	grid-gap: 2px;
+	padding-left: 3%;
+	padding-top: 4.5%;
+	font-size: small;
+	&:nth-child(2) {
+		a.link-kontakt {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-media {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-oss {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-faq {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+	}
+}
+.rad-tre {
+	display: grid;
+	grid-gap: 2px;
+	padding-left: 3%;
+	padding-top: 4.5%;
+	font-size: small;
+	&:nth-child(3) {
+		a.link-kontaktaoss {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-email {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-telefon {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+		a.link-adress {
+			color: $color_2;
+			text-decoration: none;
+			font-weight: lighter;
+		}
+	}
+}
+.footer-textbox {
+	flex: 1;
+	padding-top: 90px;
+	border-radius: 8px;
+	margin-left: 12%;
+	p {
+		margin-bottom: 2%;
+	}
+	input {
+		width: 50%;
+		padding: 15px;
+		box-sizing: border-box;
+		border-radius: 13px;
+		color: $color_3;
+	}
+}
+.footer-button {
+	display: inline-block;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 8px;
+	margin-left: 3%;
+	cursor: pointer;
+	background-color: $background-color_2;
+	color: $color_3;
+	font-size: small;
+	width: 20%;
+}
+.ikoner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+	padding-top: 20%;
+	padding-left: 15%;
+	margin-bottom: 2%;
+}
+.twitter {
+	display: inline-block;
+	margin-right: 10px;
+	color: $color_2;
+	font-size: 30px;
+	text-align: center;
+}
+.instagram {
+	display: inline-block;
+	margin-right: 10px;
+	color: $color_2;
+	font-size: 30px;
+}
+.facebook {
+	display: inline-block;
+	margin-right: 10px;
+	color: $color_2;
+	font-size: 30px;
+}
+.ikontext {
+	margin-right: 10px;
+	font-size: 10px;
+	text-align: center;
+}
+@media only screen and (max-width:600px) {
+	footer {
+		padding: 50px;
+		display: flex;
+		background-color: $background-color_3;
+		justify-content: space-between;
+	}
+	.rad-ett {
+		display: grid;
+		padding-left: 10px;
+		font-size: 13px;
+		text-align: left;
+	}
+	.rad-tva {
+		display: grid;
+		padding-left: 15px;
+		font-size: 13px;
+	}
+	.rad-tre {
+		display: none;
+	}
+	.ikoner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-wrap: wrap;
+		i {
+			font-size: 30px;
+		}
+	}
+	.ikontext {
+		padding-top: 10px;
+	}
+	.footer-textbox {
+		display: none;
+	}
+}
+@media only screen and (max-width: 844px) {
+	footer {
+		padding: 50px;
+		display: flex;
+		background-color: $background-color_3;
+		justify-content: space-between;
+	}
+	.rad-ett {
+		display: grid;
+		padding-left: 10px;
+		font-size: 13px;
+		text-align: left;
+	}
+	.rad-tva {
+		display: grid;
+		padding-left: 15px;
+		font-size: 13px;
+	}
+	.rad-tre {
+		display: none;
+	}
+	.ikoner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-wrap: wrap;
+		i {
+			font-size: 30px;
+		}
+	}
+	.ikontext {
+		padding-top: 10px;
+	}
+	.footer-textbox {
+		display: none;
+	}
+}
 
 

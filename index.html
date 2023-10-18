@@ -1,5 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bokhandeln</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./src/js/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/acd269acde.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <section class="left-container">
+        <!-- MENY-KNAPP -->
+        <section class="menu-button" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </section>
+        <!-- LOGO -->
+        <section class="logo-container">
+          <img src="./src/img/logo-perm-poesi.png" alt="Pärmar och Poesi" />
+        </section>
+      </section>
+      <section class="right-container">
+        <a class="header-icon" href="#search">
+          <img src="./src/img/search.png" alt="search" />
+        </a>
+        <a class="header-icon" href="#item-basket">
+          <img src="./src/img/shopping-bag.png" alt="shopping-bag" />
+        </a>
+        <a class="header-icon" href="#liked">
+          <img src="./src/img/heart.png" alt="likes" />
+        </a>
+        <a class="header-icon" href="#login">
+          <img src="./src/img/user-interface.png" alt="user-login" />
+        </a>
+      </section>
+      <!--MENYN -->
+      <section class="hidden menu-container">
+        <nav class="menu-container__nav-menu">
+          <ul>
+            <!-- BÖCKER -->
+            <li>
+              <a href="#" data-submenu="bocker" onclick="toggleSubMenu(this)"
+                >Böcker</a
+              >
+              <div class="hidden-sub sub-navigation" id="bocker">
+                <ul>
+                  <li><a href="#"> Populärt </a></li>
+                  <li><a href="#"> Ämnen A-Ö </a></li>
+                  <li><a href="#"> Poesi- och skönlitteratur</a></li>
+                  <li><a href="#"> Erbjudanden </a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- SKRIVMATERIAL -->
+            <li>
+              <a
+                href="#"
+                data-submenu="skrivmaterial"
+                onclick="toggleSubMenu(this)"
+                >Skrivmaterial</a
+              >
+              <div class="hidden-sub sub-navigation" id="skrivmaterial">
+                <ul>
+                  <li><a href="#"> Pennor </a></li>
+                  <li><a href="#"> Anteckningsböcker </a></li>
+                  <li><a href="#"> Skrivmaskiner </a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- PÄRMAR -->
+            <li>
+              <a href="#" data-submenu="parmar" onclick="toggleSubMenu(this)"
+                >Pärmar</a
+              >
+              <div class="hidden-sub sub-navigation" id="parmar">
+                <ul>
+                  <li><a href="#"> Ringpärmar </a></li>
+                  <li><a href="#"> Gaffelpärmar </a></li>
+                  <li><a href="#"> Mappar </a></li>
+                  <li><a href="#"> Arkiv och förvaring </a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- LJUDBÖCKER -->
+            <li>
+              <a
+                href="#"
+                data-submenu="ljudbocker"
+                onclick="toggleSubMenu(this)"
+                >Ljudböcker</a
+              >
+              <div class="hidden-sub sub-navigation" id="ljudbocker">
+                <ul>
+                  <li><a href="#"> Populärt </a></li>
+                  <li><a href="#"> Ämnen A - Ö </a></li>
+                  <li><a href="#"> För barnen </a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- KALENDRAR -->
+            <li>
+              <a href="#" data-submenu="kalendrar" onclick="toggleSubMenu(this)"
+                >Kalendrar</a
+              >
+              <div class="hidden-sub sub-navigation" id="kalendrar">
+                <ul>
+                  <li><a href="#"> Kalendrar & Almanackor </a></li>
+                  <li><a href="#"> Adventskalender </a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <!-- MAIN-CONTENT -->
+    <main>
+      <div id="overlay" class="overlay visible"></div>
+      <section class="recommendations">
+        <h3>Rekommendationer</h3>
+
+        <section class="book-container">
+          <button
+            class="scroll-button-left"
+            id="scroll-left"
+            onclick="leftScroll()"
+          >
+            <img src="./src/img/left-arrow.png" />
+          </button>
+
+          <section class="book-inner-container">
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/aja-baja-alfons-aberg.jpg"
+                alt="Bok - Aja baja alfons"
+              />
+              <h4>Aja baja, Alfons Åberg</h4>
+              <h2>Gunilla Bergström</h2>
+              <p><data class="price">120</data> kr</p>
+              <button>Köp</button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/brandkarsmysteriet.jpg"
+                alt="Bok - Brandmysteriet"
+              />
+              <h4>Brandbysteriet</h4>
+              <h2>Gunilla Bergström</h2>
+              <p><data class="price">120</data> kr</p>
+              <button>Köp</button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/handbok-for-superhjaltar-ensam.jpg"
+                alt="Bok - Brandmysteriet"
+              />
+              <h4>Handbok för Superhjältar - Ensam</h4>
+              <h2>Elias & Agnes Vämhund</h2>
+              <p><data class="price">120</data> kr</p>
+              <button>Köp</button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/handbok-for-superhjaltar-roda-masken.jpg"
+                alt="Bok - Handbok för superhjältar - Röda masken"
+              />
+              <h4>Handbok för superhjältar - Röda masken</h4>
+              <h2>Elias & Agnes Vämlund</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/hundmannen.jpg"
+                alt="Bok - Hundmannen"
+              />
+              <h4>Hundmannen</h4>
+              <h2>Dav Pilkey</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/musse-helium-aventyret-i-lindrizia.jpg"
+                alt="Bok - Musse"
+              />
+              <h4>Musse Helium</h4>
+              <h2>Camilla Brinck</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/musse-helium-aventyret-i-lindrizia.jpg"
+                alt="Bok - Musse"
+              />
+              <h4>Musse Helium</h4>
+              <h2>Camilla Brinck</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/musse-helium-aventyret-i-lindrizia.jpg"
+                alt="Bok - Musse"
+              />
+              <h4>Musse Helium</h4>
+              <h2>Camilla Brinck</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/musse-helium-aventyret-i-lindrizia.jpg"
+                alt="Bok - Musse"
+              />
+              <h4>Musse Helium</h4>
+              <h2>Camilla Brinck</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/musse-helium-aventyret-i-lindrizia.jpg"
+                alt="Bok - Musse"
+              />
+              <h4>Musse Helium</h4>
+              <h2>Camilla Brinck</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/musse-helium-aventyret-i-lindrizia.jpg"
+                alt="Bok - Musse"
+              />
+              <h4>Musse Helium</h4>
+              <h2>Camilla Brinck</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+
+            <article class="book-sale">
+              <img
+                src="./src/img/books/barn/musse-helium-aventyret-i-lindrizia.jpg"
+                alt="Bok - Musse"
+              />
+              <h4>Musse Helium</h4>
+              <h2>Camilla Brinck</h2>
+              <p><data class="price">120</data> kr</p>
+              <button><a href="#köp-item">Köp</a></button>
+            </article>
+          </section>
+
+          <button
+            class="scroll-button-right"
+            id="scroll-right"
+            onclick="rightScroll()"
+          >
+            <img src="./src/img/right-arrow.png" alt="Menu - Right Arrow" />
+          </button>
+        </section>
+      </section>
+    </main>
+
+    <!-- FOOOTER -->
+    <footer>
+      <div class="rad-ett">
+        <p><a href="#" class="link-hem">Hem</a></p>
+        <p><a href="#" class="link-evenemang">Evenemang</a></p>
+        <p><a href="#" class="link-bocker">Böcker</a></p>
+        <p><a href="#" class="link-nyheter">Nyheter</a></p>
+      </div>
+
+      <div class="rad-tva">
+        <p><a href="#" class="link-kontakt">Kontakt</a></p>
+        <p><a href="#" class="link-media">Media</a></p>
+        <p><a href="#" class="link-oss">Om oss</a></p>
+        <p><a href="#" class="link-faq">FAQ</a></p>
+      </div>
+
+      <div class="rad-tre">
+        <p><a href="#" class="link-kontaktaoss">Kontakta oss</a></p>
+        <p><a href="#" class="link-email">Email: info@bibiltiotek.com</a></p>
+        <p><a href="#" class="link-telefon">Telefon: 123123</a></p>
+        <p>
+          <a href="#" class="link-adress">Adress: Stockholm Sverige 123123</a>
+        </p>
+      </div>
+      <div class="ikoner">
+        <a href="https://twitter.com" class="twitter">
+          <i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com" class="instagram">
+          <i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://facebook.com" class="facebook">
+          <i class="fab fa-facebook"></i
+        ></a>
+        <span class="ikontext">© 2023 Bibliotek. All Rights Reserved.</span>
+      </div>
+
+      <div class="footer-textbox">
+        <p>Signera</p>
+        <input type="text" placeholder="e-post adress" />
+        <button class="footer-button">Prenumerera</button>
+      </div>
+    </footer>
+  </body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,3 +392,4 @@
 
 </body>
 </html>
+
