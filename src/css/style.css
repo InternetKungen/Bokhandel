@@ -147,14 +147,14 @@ a {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  transform: rotate(-90deg) scale(0.9);
+  transform: rotate(-90deg) !important;
   background: rgba(241, 162, 167, 0.6901960784);
   width: 60px;
   height: 60px;
   padding-left: 22px;
 }
 .open span:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(45deg) !important;
   transform-origin: 0 0;
   width: 45px;
 }
@@ -163,15 +163,9 @@ a {
   opacity: 0;
 }
 .open span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) !important;
   transform-origin: 0 100%;
   width: 45px;
-}
-.open:hover {
-  transform: scale(1.1);
-}
-.open:hover span {
-  transform: scale(1);
 }
 
 .hidden-sub {
