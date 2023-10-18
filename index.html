@@ -27,14 +27,19 @@
         </div>
       </div>
       <div class="right-container">
-        <div class="search-container">
+        <div class="search-container transparant-search-container">
           <input
             type="text"
             id="search-input"
-            class="hidden-search-input search-input"
+            class="search-input hidden-search-input"
             placeholder="Sök..."
           />
-          <a class="search-icon" href="#search" id="searchIcon">
+          <a
+            class="search-icon"
+            href="#search"
+            id="searchIcon"
+            onclick="toggleSearchBar()"
+          >
             <img src="./src/img/search.png" alt="search" />
           </a>
         </div>
