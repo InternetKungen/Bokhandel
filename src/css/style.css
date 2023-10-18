@@ -393,6 +393,7 @@ footer {
   justify-content: space-around;
   flex: 1;
 }
+
 .rad-ett {
   display: flex;
   flex-direction: column;
