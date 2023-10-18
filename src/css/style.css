@@ -376,22 +376,32 @@ color: pink;
 } */
 /* Media Queries */
 footer {
+  border-top: 1px solid #2f000b;
+}
+
+.footer-content {
   display: flex;
-  height: 30%;
+  height: fit-content;
   background-color: #f30044;
   color: #fff;
   justify-content: space-between;
-  position: absolute;
+  align-items: center;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
 }
-footer li {
-  margin: 15px;
-}
 
+.footer-content__navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+}
 .rad-ett {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-gap: 2px;
   padding-left: 7%;
   padding-top: 4.5%;
@@ -423,8 +433,8 @@ footer li {
 }
 
 .rad-tva {
-  display: grid;
-  grid-gap: 2px;
+  display: flex;
+  flex-direction: column;
   padding-left: 3%;
   padding-top: 4.5%;
   font-size: small;
@@ -451,7 +461,8 @@ footer li {
 }
 
 .rad-tre {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-gap: 2px;
   padding-left: 3%;
   padding-top: 4.5%;
@@ -483,32 +494,44 @@ footer li {
 
 .footer-textbox {
   flex: 1;
-  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   border-radius: 8px;
-  margin-left: 12%;
+  margin-right: 20px;
+  width: fit-content;
 }
 .footer-textbox p {
-  margin-bottom: 2%;
+  margin-bottom: 10px;
 }
 .footer-textbox input {
-  width: 50%;
+  width: 240px;
   padding: 15px;
   box-sizing: border-box;
   border-radius: 13px;
   color: black;
+  height: 45px;
+}
+
+.footer-textbox-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footer-button {
   display: inline-block;
-  height: 50px;
+  height: 40px;
   border: 1px solid black;
   border-radius: 8px;
-  margin-left: 3%;
+  margin-left: 8px;
+  margin-top: 2px;
   cursor: pointer;
   background-color: white;
   color: black;
   font-size: small;
-  width: 20%;
+  width: 88px;
 }
 
 .ikoner {
@@ -517,9 +540,7 @@ footer li {
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  padding-top: 20%;
-  padding-left: 15%;
-  margin-bottom: 2%;
+  flex: 1;
 }
 
 .twitter {
@@ -551,7 +572,7 @@ footer li {
 }
 
 @media only screen and (max-width: 600px) {
-  footer {
+  .footer-content {
     padding: 50px;
     display: flex;
     background-color: #2f000b;
@@ -589,7 +610,7 @@ footer li {
   }
 }
 @media only screen and (max-width: 844px) {
-  footer {
+  .footer-content {
     padding: 50px;
     display: flex;
     background-color: #2f000b;
