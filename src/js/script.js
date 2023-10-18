@@ -69,6 +69,13 @@ function smoothScroll(element, targetX, duration) {
     smoothScroll(container, targetX, 300); // Justera duration efter behov
   }
   
+  function toggleSearchBar() {
+    const searchButton = document.querySelector('.search-input');
+    const searchButtonBackground = document.querySelector('.search-container');
+
+    searchButton.classList.toggle('hidden-search-input');
+    searchButtonBackground.classList.toggle('transparant-search-container');
+  }
 
 // SMOOTHER WORKING-------------------------------
 // function smoothScroll(element, targetX, duration) {

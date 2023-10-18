@@ -27,9 +27,22 @@
         </div>
       </div>
       <div class="right-container">
-        <a class="header-icon" href="#search">
-          <img src="./src/img/search.png" alt="search" />
-        </a>
+        <div class="search-container transparant-search-container">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input hidden-search-input"
+            placeholder="Sök..."
+          />
+          <a
+            class="search-icon"
+            href="#search"
+            id="searchIcon"
+            onclick="toggleSearchBar()"
+          >
+            <img src="./src/img/search.png" alt="search" />
+          </a>
+        </div>
         <a class="header-icon" href="#item-basket">
           <img src="./src/img/shopping-bag.png" alt="shopping-bag" />
         </a>

@@ -31,11 +31,12 @@ header {
 
 .right-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-direction: row;
   align-items: center;
   transform: scale(0.6);
-  margin-right: -40px;
+  margin-right: 0;
+  min-width: 300px;
 }
 
 .menu-button {
@@ -131,7 +132,8 @@ a {
 
 .logo-container img {
   height: 120px;
-  margin-top: 10px;
+  min-width: 120px;
+  margin-top: 6px;
   z-index: 100;
 }
 
@@ -176,7 +178,54 @@ a {
   transform: scale(0);
 }
 
+.search-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50px;
+  background: white;
+}
+
+.transparant-search-container {
+  background: transparent;
+}
+
+.search-input {
+  min-width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 20px;
+  cursor: text;
+  border: #2f000b;
+  transition: all 0.3s ease-out;
+}
+
+.hidden-search-input {
+  width: 0px;
+  opacity: 0;
+  cursor: default;
+}
+
+.search-icon {
+  position: absolute;
+  margin-right: 10px;
+}
+.search-icon img {
+  height: 30px;
+  width: 30px;
+}
+.search-icon:hover {
+  filter: grayscale(90%);
+  mix-blend-mode: darken;
+}
+
 .header-icon {
+  min-width: 40px;
   margin-right: 10px;
   transform: scale(0.9);
 }
@@ -194,7 +243,7 @@ a {
 }
 
 .header-icon:nth-child(4) {
-  margin-right: 20px;
+  margin-right: -40px;
 }
 
 .book-inner-container {

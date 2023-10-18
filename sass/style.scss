@@ -1,3 +1,4 @@
+// VARIABLES
 $color1: #fcebe4;
 $color2: #f1a2a7;
 $color3: #f30044;
@@ -5,6 +6,7 @@ $color4: #2f000b;
 
 $headerHeight: 80px;
 
+// SNIPPETS
 @mixin justify-content-left-row {
 	display: flex;
 	justify-content: flex-start;
@@ -31,6 +33,7 @@ $headerHeight: 80px;
 	text-overflow: ellipsis;
 }
 
+// STYLES
 body {
 	display: flex;
 	justify-content: center;
@@ -59,9 +62,10 @@ header {
 } 
 
 .right-container {
-	@include justify-content-left-row;
+	@include justify-content-right-row;
 	transform: scale(0.6);
-	margin-right: -40px;
+	margin-right: 0;
+	min-width: 300px;
 } 
 
 .menu-button {
@@ -157,7 +161,7 @@ a {
 	transition: all 1s;
 	overflow: hidden;
 }
-
+// js - Overlay
 .visible {
 	display: none;
 	// // display: block;
@@ -174,7 +178,8 @@ a {
 .logo-container {
 	img {
 		height: 120px;
-		margin-top: 10px;
+		min-width: 120px;
+		margin-top: 6px;
 		z-index: 100;
 	}
 }
@@ -227,18 +232,67 @@ a {
 	transform: scale(0);
 }
 
+.search-container {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	width: fit-content;
+	height: fit-content;
+	border-radius: 50px;
+	background: white;
+}
+
+.transparant-search-container {
+	background: transparent;
+}
+
+
+.search-input {
+	min-width: 100px;
+	height: 40px;
+	border-radius: 30px;
+	padding-left: 20px;
+	cursor:text;
+	border: $color4;
+	transition: all 0.3s ease-out;
+}
+
+.hidden-search-input {
+	width: 0px;
+	opacity: 0;
+	cursor:default;
+}
+
+.search-icon {
+	position: absolute;
+	margin-right: 10px;
+	// height: $searchHeight;
+	img {
+		height: 30px;
+		width:  30px;
+		
+	}
+	&:hover {
+		filter: grayscale(90%);
+		mix-blend-mode:darken;
+	}
+}
+
 .header-icon {
 	// --overlay-color: #{$color3}; // Skapa en CSS-variabel för din färg
 	// filter: grayscale(50%) invert(100%) hue-rotate(80deg);
 	// mix-blend-mode: color;
 	// height: 40px;
 	// width:  40px;
+	min-width: 40px;
 	margin-right: 10px;
 	transform: scale(0.9);
 	img {
 		height: 40px;
 		width:  40px;
-		
 	}
 	&:hover {
 		// --overlay-color: $color4;
@@ -259,7 +313,7 @@ a {
 }
 
 .header-icon:nth-child(4) {
-	margin-right: 20px;
+	margin-right: -40px;
 }
 
 .book-inner-container {
