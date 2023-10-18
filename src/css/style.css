@@ -5,6 +5,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   height: fit-content;
+  overflow-x: hidden;
 }
 
 header {
@@ -68,7 +69,7 @@ header {
   box-shadow: 0 0 8px #2f000b;
 }
 .menu-button:hover span {
-  scale: 0.9;
+  transform: scale(0.9);
 }
 
 a {
@@ -84,7 +85,6 @@ a {
   background-color: #f1a2a7;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  transform: translateX(1);
   z-index: 5;
   border-bottom: 1px solid #2f000b;
   font-weight: 600;
@@ -168,10 +168,10 @@ a {
   width: 45px;
 }
 .open:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 .open:hover span {
-  scale: 1;
+  transform: scale(1);
 }
 
 .hidden-sub {
@@ -179,7 +179,7 @@ a {
   height: 0px;
   background-color: transparent;
   color: transparent;
-  scale: 0;
+  transform: scale(0);
 }
 
 .header-icon {
