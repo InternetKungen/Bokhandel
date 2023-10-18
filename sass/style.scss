@@ -191,13 +191,13 @@ a {
 .open {
 	@include flex-center-all;
 	box-sizing: border-box;
-	transform: rotate(-90deg) scale(.9);
+	transform: rotate(-90deg) !important;
 	background: #f1a2a7b0;
 	width: 60px;
 	height: 60px;
 	padding-left: 22px;
 	span:nth-child(1) {
-		transform: rotate(45deg);
+		transform: rotate(45deg) !important;
 		transform-origin: 0 0;
 		width: 45px;
 	}
@@ -206,16 +206,16 @@ a {
 		opacity: 0;
 	}
 	span:nth-child(3) {
-		transform: rotate(-45deg);
+		transform: rotate(-45deg) !important;
 		transform-origin: 0 100%;
 		width: 45px;
 	}
-	&:hover {
-		transform: scale(1.1);
-		span {
-			transform: scale(1);
-		}
-	}
+	// &:hover {
+	// 	transform: scale(1.1) !important;
+	// 	span {
+	// 		transform: scale(1);
+	// 	}
+	// }
 		
 }
 //js - Menu - Sub-menu
