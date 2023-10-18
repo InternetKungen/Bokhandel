@@ -16,3 +16,5 @@ sass --watch .\sass\style.scss .\src\css\style.css
 Tailwind är inkluderad i <head> (<script src="https://cdn.tailwindcss.com"></script>)
 
 Tailwind CSS Cheat Sheet: https://tailwindcomponents.com/cheatsheet/
+
+Hittade felet med animationen - hidden är en tailwind-class, som gör display: none.

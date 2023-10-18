@@ -185,7 +185,7 @@ a {
 }
 
 //js - Menu
-.hidden {
+.hidden-menu {
 	// display: none;
     opacity: 0;
     transform:translateX(-100%);
@@ -481,7 +481,11 @@ $color2: #f1a2a7;
 $color3: #f30044;
 $color4: #2f000b;
 
-// ADDED--------------------------------
+.like-heart-swap {
+	display: none;
+}
+
+// ADDED-FOOTER-------------------------------
 
 $color_1: #fff;
 $color_2: white;
