@@ -37,6 +37,7 @@ body {
 	flex-direction: column;
 	margin: 0 auto;
     height: fit-content;
+	overflow-x: hidden;
 }
 
 header {
@@ -92,7 +93,7 @@ header {
 	&:hover {
 		box-shadow: 0 0 8px $color4;
 		span {
-			scale: 0.9;
+			transform: scale(0.9);
 		}
 	}
 	
@@ -111,7 +112,7 @@ a {
     background-color: $color2;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
-    transform:translateX(1);
+    // transform: translateX(1);
 	z-index: 5;
 	border-bottom: 1px solid $color4;
 	font-weight: 600;
@@ -210,9 +211,9 @@ a {
 		width: 45px;
 	}
 	&:hover {
-		scale: 1.1;
+		transform: scale(1.1);
 		span {
-			scale: 1;
+			transform: scale(1);
 		}
 	}
 		
@@ -223,7 +224,7 @@ a {
     height: 0px;
     background-color: transparent;
 	color: transparent;
-	scale: 0;
+	transform: scale(0);
 }
 
 .header-icon {
