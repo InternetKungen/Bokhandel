@@ -18,7 +18,18 @@ function toggleMenu() {
           overlay.classList.add('visible');
       }
   });
+
+  window.addEventListener('scroll', function () {
+    if (section_menu.classList.contains('hidden-menu')) {
+        return; // Om menyn är dold behöver vi inte göra något vid scrollning
+    }
+
+    section_menu.classList.add('hidden-menu');
+    menuButton.classList.remove('open');
+    overlay.classList.add('visible');
+});
 }
+
 
 function toggleSubMenu(link) {
     const submenuId = link.getAttribute('data-submenu');
