@@ -410,6 +410,74 @@ a {
   box-shadow: 0 0 5px #2f000b;
 }
 
+.separator-wide-2 {
+  width: 48rem;
+  margin: 0 auto;
+  display: none; /* Dölj separeraren som standard */
+  border: none !important;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.separator-wide-2 img {
+  margin: 0 auto;
+  height: 200px;
+}
+
+@media (min-width: 911px) and (max-width: 1215px) {
+  .separator-wide-2 {
+    display: block; /* Visa separeraren när skärmbredden är mindre än 768px */
+  }
+}
+.separator-wide-1 {
+  width: 48rem;
+  margin: 0 auto;
+  display: none; /* Dölj separeraren som standard */
+  border: none !important;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.separator-wide-1 img {
+  margin: 0 auto;
+  height: 200px;
+}
+
+@media (min-width: 911px) and (max-width: 1215px) {
+  .separator-wide-1 {
+    display: block; /* Visa separeraren när skärmbredden är mindre än 768px */
+  }
+}
+.separator {
+  height: 100px;
+  margin: 0 auto;
+  display: none; /* Dölj separeraren som standard */
+  border: none !important;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 910px) {
+  .separator {
+    display: block; /* Visa separeraren när skärmbredden är mindre än 768px */
+  }
+}
+.separator-2 {
+  width: 28rem;
+  margin: 0 auto;
+  display: none; /* Dölj separeraren som standard */
+  border: none !important;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.separator-2 img {
+  margin: 0 auto;
+  height: 100px;
+}
+
+@media (max-width: 910px) {
+  .separator-2 {
+    display: block; /* Visa separeraren när skärmbredden är mindre än 768px */
+  }
+}
 /* a{
 color: white;
 text-decoration: none;
