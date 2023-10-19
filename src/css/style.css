@@ -174,7 +174,6 @@ a {
   transform: translateY(-60px) scaleY(0);
   height: 0px;
   background-color: transparent;
-  color: transparent;
   transform: scale(0);
 }
 
@@ -277,7 +276,6 @@ a {
   width: 50px;
   height: 65px;
   background: #f1a2a7;
-  color: #f1a2a7;
   border: 1px solid #fcebe4;
   font-size: 13px;
   cursor: pointer;
@@ -293,7 +291,6 @@ a {
   opacity: 1;
   box-shadow: 0 0 30px #f1a2a7;
   background: #f30044;
-  color: #fcebe4;
 }
 
 .scroll-button-right {
@@ -301,7 +298,6 @@ a {
   width: 50px;
   height: 65px;
   background: #f1a2a7;
-  color: #f1a2a7;
   border: 1px solid #fcebe4;
   font-size: 13px;
   cursor: pointer;
@@ -317,7 +313,6 @@ a {
   opacity: 1;
   box-shadow: 0 0 30px #f1a2a7;
   background: #f30044;
-  color: #fcebe4;
 }
 
 .recommendations h3 {
