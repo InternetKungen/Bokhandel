@@ -92,6 +92,21 @@ function toggleHeart() {
   const heartButton = document.getElementById('like-heart');
   heartButton.classList.toggle('hidden');
 }
+
+function toggleHeart2() {
+  const heartButton = document.getElementById('like-heart-2');
+  heartButton.classList.toggle('hidden');
+}
+
+function toggleHeart3() {
+  const heartButton = document.getElementById('like-heart-3');
+  heartButton.classList.toggle('hidden');
+}
+
+function toggleHeart4() {
+  const heartButton = document.getElementById('like-heart-4');
+  heartButton.classList.toggle('hidden');
+}
 // SMOOTHER WORKING-------------------------------
 // function smoothScroll(element, targetX, duration) {
 //     const startX = element.scrollLeft;
