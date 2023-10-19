@@ -3,7 +3,7 @@ function toggleMenu() {
     const menuButton = document.querySelector('.menu-button');
     const overlay = document.querySelector('.overlay');
 
-    section_menu.classList.toggle('hidden');
+    section_menu.classList.toggle('hidden-menu');
     menuButton.classList.toggle('open'); // Lägg till eller ta bort CSS-klassen 'open' 
     overlay.classList.toggle('visible');
 
@@ -13,7 +13,7 @@ function toggleMenu() {
       const isClickOnMenuButton = menuButton.contains(event.target);
 
       if (!isClickInsideMenu && !isClickOnMenuButton) {
-          section_menu.classList.add('hidden');
+          section_menu.classList.add('hidden-menu');
           menuButton.classList.remove('open');
           overlay.classList.add('visible');
       }
@@ -77,6 +77,10 @@ function smoothScroll(element, targetX, duration) {
     searchButtonBackground.classList.toggle('transparant-search-container');
   }
 
+function toggleHeart() {
+  const heartButton = document.getElementById('like-heart');
+  heartButton.classList.toggle('hidden');
+}
 // SMOOTHER WORKING-------------------------------
 // function smoothScroll(element, targetX, duration) {
 //     const startX = element.scrollLeft;

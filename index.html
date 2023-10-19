@@ -54,7 +54,7 @@
         </a>
       </div>
       <!--MENYN -->
-      <div class="hidden menu-container">
+      <div class="hidden-menu menu-container">
         <nav class="menu-container__nav-menu">
           <ul>
             <!-- BÖCKER -->
@@ -321,13 +321,23 @@
             >
               Visa mer
             </button>
-            <a href="">
+            <div
+              class="w-fit h-fit mr-20 cursor-pointer"
+              onclick="toggleHeart()"
+            >
               <img
-                class="h-12 w-12 m-2.5 mr-10"
+                class="h-12 w-12 m-2.5 mr-10 absolute object-left-top"
                 src="./src/img/heart.png"
                 alt="Icon - Like"
               />
-            </a>
+
+              <img
+                class="h-12 w-12 m-2.5 mr-10 absolute object-left-top hidden"
+                src="./src/img/heartfilled.png"
+                id="like-heart"
+                alt="Icon - Like"
+              />
+            </div>
           </div>
         </section>
       </div>
