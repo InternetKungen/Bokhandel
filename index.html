@@ -14,6 +14,7 @@
   </head>
   <body>
     <header>
+      <!-- LEFT-CONTAINER -->
       <div class="left-container">
         <!-- MENY-KNAPP -->
         <div class="menu-button" onclick="toggleMenu()">
@@ -26,7 +27,21 @@
           <img src="./src/img/logo-perm-poesi.png" alt="Pärmar och Poesi" />
         </div>
       </div>
+      <!-- MIDDLE-CONTAINER -->
+      <div class="middle-container">
+        <div class="middle-search-bar">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input-middle"
+            placeholder="Sök..."
+          />
+          <img src="./src/img/search.png" alt="search-icon" />
+        </div>
+      </div>
+      <!-- RIGHT-CONTAINER -->
       <div class="right-container">
+        <!-- SEARCH-BAR- -->
         <div class="search-container transparant-search-container">
           <input
             type="text"
@@ -139,7 +154,9 @@
     </header>
     <!-- MAIN-CONTENT -->
     <main>
+      <!-- OVERLAY-MENY -->
       <div id="overlay" class="overlay visible"></div>
+
       <section class="recommendations">
         <h3>Rekommendationer</h3>
 

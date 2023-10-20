@@ -248,7 +248,53 @@ a {
 	background: transparent;
 }
 
+@media (min-width: 911px) {
+	.search-container {
+		display: none;
+	}
+}
 
+.middle-container {
+	display: none;
+	width: fit-content;
+	height: fit-content;
+}
+.middle-search-bar {
+	width:300px;
+	height: 30px;
+	background-color: white;
+	border-radius: 25px;
+	input {
+		width:300px;
+		height: 30px;
+		border-radius: 25px;
+		border: none;
+		padding-left: 12px;
+	}
+	img {
+		position: relative;
+		height: 18px;
+		top:-24px;
+		right: -273px;
+	}
+}
+
+@media (min-width: 911px) and (max-width: 1215px)  {
+	.middle-container {
+		display: block;
+	}
+}
+
+@media (min-width: 1216px) {
+	.middle-container {
+		display: block; 
+	}
+	.middle-search-bar {
+		position: absolute;
+		right: 155px;
+		top: 27px
+	}
+}
 .search-input {
 	min-width: 100px;
 	height: 40px;
@@ -268,7 +314,6 @@ a {
 .search-icon {
 	position: absolute;
 	margin-right: 10px;
-	// height: $searchHeight;
 	img {
 		height: 30px;
 		width:  30px;
@@ -281,11 +326,6 @@ a {
 }
 
 .header-icon {
-	// --overlay-color: #{$color3}; // Skapa en CSS-variabel för din färg
-	// filter: grayscale(50%) invert(100%) hue-rotate(80deg);
-	// mix-blend-mode: color;
-	// height: 40px;
-	// width:  40px;
 	min-width: 40px;
 	margin-right: 10px;
 	transform: scale(0.9);
@@ -294,25 +334,42 @@ a {
 		width:  40px;
 	}
 	&:hover {
-		// --overlay-color: $color4;
 		filter: grayscale(90%);
 		mix-blend-mode:darken;
 	}
 }
 
-// .header-icon:nth-child(1) {
-// 	// margin-right: 2px;
-// }
-
-.header-icon:nth-child(2) {
-	// height: 52px; //anävnder scale istället
-	// width:  52px;
+.header-icon:nth-child(2) {	
 	transform: scale(1.2);
-	// margin-right: 1px;
-}
 
+}
+// denna behövs ej men har varit med så länge så design blir fel om den tas bort
 .header-icon:nth-child(4) {
 	margin-right: -40px;
+}
+
+@media (min-width: 911px) and (max-width: 1215px)  {
+	.header-icon {
+		transform: scale(1);
+		margin-right: 20px;
+	}
+	.header-icon:nth-child(2) {	
+		transform: scale(1.4);
+	
+	}
+}
+
+@media (min-width: 1216px) {
+	.header-icon {
+		transform: scale(1);
+		margin-right: 20px;
+		display: flex;
+		align-items: baseline;
+	}
+
+	.header-icon:nth-child(2) {	
+		transform: scale(1.4);
+	}
 }
 
 .book-inner-container {
@@ -451,10 +508,6 @@ a {
 	button {
 		align-self: center;
 		flex: 1;
-		// position: absolute;
-		// bottom: 10px;
-		// left: 50%;
-		// transform: translateX(-50%) translateY(-10%);
 		background: $color2;
 		color: $color4;
 		width: 180px;
