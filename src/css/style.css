@@ -194,6 +194,52 @@ a {
   background: transparent;
 }
 
+@media (min-width: 911px) {
+  .search-container {
+    display: none;
+  }
+}
+.middle-container {
+  display: none;
+  width: fit-content;
+  height: fit-content;
+}
+
+.middle-search-bar {
+  width: 300px;
+  height: 30px;
+  background-color: white;
+  border-radius: 25px;
+}
+.middle-search-bar input {
+  width: 300px;
+  height: 30px;
+  border-radius: 25px;
+  border: none;
+  padding-left: 12px;
+}
+.middle-search-bar img {
+  position: relative;
+  height: 18px;
+  top: -24px;
+  right: -273px;
+}
+
+@media (min-width: 911px) and (max-width: 1215px) {
+  .middle-container {
+    display: block;
+  }
+}
+@media (min-width: 1216px) {
+  .middle-container {
+    display: block;
+  }
+  .middle-search-bar {
+    position: absolute;
+    right: 155px;
+    top: 27px;
+  }
+}
 .search-input {
   min-width: 100px;
   height: 40px;
@@ -245,6 +291,26 @@ a {
   margin-right: -40px;
 }
 
+@media (min-width: 911px) and (max-width: 1215px) {
+  .header-icon {
+    transform: scale(1);
+    margin-right: 20px;
+  }
+  .header-icon:nth-child(2) {
+    transform: scale(1.4);
+  }
+}
+@media (min-width: 1216px) {
+  .header-icon {
+    transform: scale(1);
+    margin-right: 20px;
+    display: flex;
+    align-items: baseline;
+  }
+  .header-icon:nth-child(2) {
+    transform: scale(1.4);
+  }
+}
 .book-inner-container {
   display: flex;
   justify-content: flex-start;
